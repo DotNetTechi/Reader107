@@ -558,7 +558,7 @@
             </Button>
 
             <!-- Next Button -->
-            <Button x:Name="btn_Next" Content="Next" HorizontalAlignment="Right" Grid.Row="1" Background="#FF1762A8" BorderBrush="Gray" BorderThickness="1" Click="on_Next" FontSize="22 " Foreground="White" Margin="0,3.2,-0.2,-6.8" Width="137" RenderTransformOrigin="0.502,0.5" Height="58" VerticalAlignment="Top">
+            <Button x:Name="btn_Next" Content="Next" HorizontalAlignment="Right" Grid.Row="1" Background="#FF1762A8" BorderBrush="Gray" BorderThickness="1" Click="on_Next" FontSize="22 " Foreground="White" Margin="0,0,0.2,-5.2" Width="137" RenderTransformOrigin="0.502,0.5" Height="58" VerticalAlignment="Bottom">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="20">

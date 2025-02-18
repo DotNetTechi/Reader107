@@ -54,6 +54,14 @@ namespace IDT_Reader
             TCP_IP.Visibility = Visibility.Visible;
         }
 
-        
+        private void On_Skip(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void on_Next(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
