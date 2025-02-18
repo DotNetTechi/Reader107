@@ -24,24 +24,36 @@ namespace IDT_Reader
             InitializeComponent();
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        private void wnd_Connection_Loaded(object sender, RoutedEventArgs e)
+        {
+            SerialReader.Visibility = Visibility.Collapsed;
+            TCP_IP.Visibility = Visibility.Collapsed;
+        }
+
+        private void rdbtn_serialreader_Checked(object sender, RoutedEventArgs e)
         {
             
             SerialReader.Visibility = Visibility.Visible;
             TCP_IP.Visibility = Visibility.Collapsed;
+
+            ComBox_ComPort.Items.Clear();
+            ComBox_ComPort.Items.Add("AUTO");
+            for (int i = 1; i < 21; i++)
+                ComBox_ComPort.Items.Add($"COM{i}");
+            ComBox_ComPort.SelectedIndex = 0;
+
+            ComBox_BaudRate.ItemsSource =PublicVariables.baudRates;
+            ComBox_BaudRate.SelectedIndex = 3;
+
         }
 
-        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        private void rdbtn_TCP_Checked(object sender, RoutedEventArgs e)
         {
-            // Hide previous content, such as ComboBox and other elements inside SerialReader
             SerialReader.Visibility = Visibility.Collapsed;
 
             TCP_IP.Visibility = Visibility.Visible;
-
-           
-
         }
 
-
+        
     }
 }

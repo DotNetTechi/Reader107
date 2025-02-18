@@ -38,6 +38,7 @@
     <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,9 +57,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PublicFile\ComponentModel.cs" />
+    <Compile Include="PublicFile\CRC-16 algorithm.cs" />
+    <Compile Include="PublicFile\FunctionsClass.cs" />
+    <Compile Include="PublicFile\PublicTextlog.cs" />
+    <Compile Include="PublicFile\PublicVariables.cs" />
+    <Compile Include="Serial Communication\_SerialPort.cs" />
     <Compile Include="Setting.xaml.cs">
       <DependentUpon>Setting.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TCP Communication\TCP_Communication.cs" />
     <Page Include="ConnectionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
