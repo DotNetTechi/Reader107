@@ -431,16 +431,17 @@
             <Border BorderBrush="White" BorderThickness="1" Grid.ColumnSpan="10" HorizontalAlignment="Stretch" Margin="0,2.6,27.2,223.8" VerticalAlignment="Stretch" Grid.Row="1">
                 <Grid Margin="-0.8,-0.8,-32,9.4">
                     <Grid.RowDefinitions>
-                        <RowDefinition/>
+                        <RowDefinition Height="397*"/>
+                        <RowDefinition Height="293*"/>
                     </Grid.RowDefinitions>
                     <!-- Define ColumnDefinitions for the grid inside the Border -->
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="77*"/>
                         <ColumnDefinition Width="18*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Content="Device :" HorizontalAlignment="Left" Margin="80,6,0,0" VerticalAlignment="Top" Height="36" Width="75" FontSize="18" Grid.Column="1" RenderTransformOrigin="-9.616,0.854"/>
-                    <Label Content="IDT R3" HorizontalAlignment="Left" Margin="175.8,6,0,0" VerticalAlignment="Top" Height="33" Width="75" FontSize="18" RenderTransformOrigin="2.069,0.502" Grid.Column="1"/>
-                    <Border BorderBrush="Black" BorderThickness="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,-2,5.4,-228.4" VerticalAlignment="Top" Height="920">
+                    <Label Content="Device :" HorizontalAlignment="Left" Margin="80.2,6,0,0" VerticalAlignment="Top" Height="36" Width="75" FontSize="18" Grid.Column="1" RenderTransformOrigin="-9.616,0.854"/>
+                    <Label Content="IDT R3" HorizontalAlignment="Left" Margin="176.2,6,0,0" VerticalAlignment="Top" Height="33" Width="75" FontSize="18" RenderTransformOrigin="2.069,0.502" Grid.Column="1"/>
+                    <Border BorderBrush="Black" BorderThickness="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,-2,5,-227.6" VerticalAlignment="Top" Height="920" Grid.RowSpan="2">
                         <TabControl Margin="1,0,1.4,161"  BorderBrush="Transparent" BorderThickness="2" Padding="10,0,0,0" Height="759" VerticalAlignment="Bottom">
                             <TabControl.Resources>
                                 <!-- Rounded TabItem Header Style -->
@@ -1357,8 +1358,7 @@
                             </TabItem>
                         </TabControl>
                     </Border>
-                    <Label Content="  Copyright©2024 IDTECH. All Right Reserved. " HorizontalAlignment="Center" Margin="613,0,272.8,-86.6" VerticalAlignment="Bottom" Height="33" Width="375" FontSize="16" RenderTransformOrigin="2.069,0.502" />
-
+                    <Label Content="  Copyright©2024 IDTECH. All Right Reserved. " HorizontalAlignment="Center" Margin="613,0,272.8,-86.6" VerticalAlignment="Bottom" Height="33" Width="375" FontSize="16" RenderTransformOrigin="2.069,0.502" Grid.Row="1" />
                     <!-- Inside the Grid, define the inner Border -->
                 </Grid>
             </Border>
