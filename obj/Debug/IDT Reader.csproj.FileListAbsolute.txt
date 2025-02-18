@@ -21,3 +21,26 @@ C:\Users\DELL\source\repos\IDT Reader\obj\Debug\ConnectionPage3.g.cs
 C:\Users\DELL\source\repos\IDT Reader\obj\Debug\ConnectionPage3.baml
 C:\Users\DELL\source\repos\IDT Reader\obj\Debug\Setting.g.cs
 C:\Users\DELL\source\repos\IDT Reader\obj\Debug\Setting.baml
+C:\Users\Rau94\Source\Repos\Reader107\bin\Debug\IDT Reader.exe.config
+C:\Users\Rau94\Source\Repos\Reader107\bin\Debug\IDT Reader.exe
+C:\Users\Rau94\Source\Repos\Reader107\bin\Debug\IDT Reader.pdb
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\IDT Reader.csproj.AssemblyReference.cache
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\MainWindow.baml
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\ConnectionPage.g.cs
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\ConnectionPage2.g.cs
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\ConnectionPage3.g.cs
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\MainWindow.g.cs
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\Setting.g.cs
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\App.g.cs
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\IDT Reader_MarkupCompile.cache
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\IDT Reader_MarkupCompile.lref
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\ConnectionPage.baml
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\ConnectionPage2.baml
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\ConnectionPage3.baml
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\Setting.baml
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\IDT Reader.g.resources
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\IDT_Reader.Properties.Resources.resources
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\IDT Reader.csproj.GenerateResource.cache
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\IDT Reader.csproj.CoreCompileInputs.cache
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\IDT Reader.exe
+C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\IDT Reader.pdb
