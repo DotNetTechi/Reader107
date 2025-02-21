@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IDT_Reader"
         mc:Ignorable="d"
-        Title="ConnectionPage2" Height="856" Width="1548.1" Loaded="wnd_Connection_Loaded" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="ConnectionPage2" Height="816.4" Width="1593.2" Loaded="wnd_Connection_Loaded" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Window.Resources>
         <SolidColorBrush x:Key="RadioButton.Static.Background" Color="#FFFFFFFF"/>
         <SolidColorBrush x:Key="RadioButton.Static.Border" Color="#FF707070"/>
@@ -194,40 +194,43 @@
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
 
         <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
-            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
             <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
-            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <!-- Fixed border thickness -->
+            <Setter Property="Width" Value="50"/>
+            <!-- Fixed width -->
+            <Setter Property="Height" Value="50"/>
+            <!-- Fixed height -->
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Padding" Value="5"/>
+            <Setter Property="UseLayoutRounding" Value="False"/>
+            <!-- Prevents automatic scaling -->
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border
                     x:Name="border"
                     BorderBrush="{TemplateBinding BorderBrush}"
-                    BorderThickness="{TemplateBinding BorderThickness}"
-                    Background="{TemplateBinding Background}"
-                    CornerRadius="20" SnapsToDevicePixels="true">
+                    BorderThickness="1" 
+                            Background="{TemplateBinding Background}"
+                    CornerRadius="20" SnapsToDevicePixels="True">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                                 <Image Source="/Images/reload.png" Width="35" Height="35" Margin="2"/>
                             </StackPanel>
                         </Border>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="IsDefaulted" Value="true">
-                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="true">
+                            <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
                                 <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
                             </Trigger>
-                            <Trigger Property="IsPressed" Value="true">
+                            <Trigger Property="IsPressed" Value="True">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
                                 <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
                             </Trigger>
-                            <Trigger Property="IsEnabled" Value="false">
+                            <Trigger Property="IsEnabled" Value="False">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
                                 <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
                             </Trigger>
@@ -236,6 +239,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
         <!--Group Box-->
         <BorderGapMaskConverter x:Key="BorderGapMaskConverter"/>
         <Style x:Key="GroupBoxStyle1" TargetType="{x:Type GroupBox}">
@@ -471,12 +475,36 @@
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="BorderThickness" Value="0,0,0,1"/>
-            <!-- Only bottom border -->
+            <!-- Fixed bottom border -->
             <Setter Property="Height" Value="30"/>
             <Setter Property="Padding" Value="5"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <!-- Prevents border change on focus -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border 
+                    BorderThickness="0,0,0,1" 
+                    BorderBrush="Black" 
+                    Background="Transparent">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
+        <Style x:Key="PortBorder" TargetType="{x:Type Border}">
+            <Setter Property="Width" Value="710"/>
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+
+
+
+
     </Window.Resources>
-    <Grid Margin="0,0,3.6,5.4">
+    <Grid Margin="0,0,4.2,-19.6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
@@ -485,10 +513,10 @@
                 <ImageBrush ImageSource="Frame 98.jpg"/>
             </Border.Background>
         </Border>
-        <Label Content="Connection Setting" HorizontalAlignment="Center" Height="56" Margin="830,12,346.4,0" VerticalAlignment="Top" Width="362" FontSize="36" FontWeight="Bold"/>
+        <Label Content="Connection Setting" HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="362" FontSize="36" FontWeight="Bold" Margin="833,18,0,0"/>
         <Label Content="Communication Type :" HorizontalAlignment="Left" Margin="674,79,0,0" VerticalAlignment="Top" Height="40" Width="275" FontSize="24" FontWeight="SemiBold"/>
         <Label Content="Port Setup :" HorizontalAlignment="Left" Margin="674,220,0,0" VerticalAlignment="Top" Height="50" Width="158" FontSize="24" FontWeight="SemiBold"/>
-        <Label Content="Reader Setting" HorizontalAlignment="Center" Height="65" Margin="897,442,346.4,0" VerticalAlignment="Top" Width="295" FontSize="36" FontWeight="Bold"/>
+        <Label Content="Reader Setting" HorizontalAlignment="Left" Height="65"  VerticalAlignment="Top" Width="295" FontSize="36" FontWeight="Bold" Margin="870,444,0,0"/>
         <Label Content="Country Name :" HorizontalAlignment="Left" Margin="683,496,0,0" VerticalAlignment="Top" Height="42" Width="275" FontSize="24" FontWeight="SemiBold"/>
         <ComboBox HorizontalAlignment="Left" Height="55" Margin="680,543,0,0" VerticalAlignment="Top" Width="710" BorderBrush="#FFD9D9D9" Text="Select Device ">
             <ComboBox.Background>
@@ -513,7 +541,81 @@
         </ComboBox>
         <Label Content="Antenna :" HorizontalAlignment="Left" Margin="677,612,0,0" VerticalAlignment="Top" Height="50" Width="135" FontSize="24" FontWeight="SemiBold"/>
         <Label Content="Protocols  :" HorizontalAlignment="Left" Margin="674,667,0,0" VerticalAlignment="Top" Height="50" Width="135" FontSize="24" FontWeight="SemiBold"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="54" Margin="1410,288,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource ButtonStyle1}"/>
+        <Border x:Name="SerialReader"
+        CornerRadius="15"
+        BorderBrush="LightGray" 
+        BorderThickness="1" 
+        Padding="10" 
+        Margin="671,269,0,0"
+        Height="140" 
+        Width="699"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"
+        Style="{DynamicResource PortBorder}">
+
+            <StackPanel>
+                <!-- COM Port Selection -->
+                <Grid>
+                    <TextBlock Text="COM Port" 
+                       FontSize="18" 
+                       VerticalAlignment="Center" 
+                       Margin="69,26,523.6,-10.8"
+                       Height="24"/>
+
+                    <ComboBox x:Name="ComBox_ComPort" 
+                      Style="{StaticResource BottomLineComboBox}" 
+                      Margin="176,12,129.6,0.2"/>
+                </Grid>
+
+                <!-- Baud Rate Selection -->
+                <Grid>
+                    <TextBlock Text="Baud Rate" 
+                       FontSize="18" 
+                       VerticalAlignment="Center" 
+                       Margin="0,37,523.6,-19.6" 
+                       Height="25" HorizontalAlignment="Right" Width="84"/>
+
+                    <ComboBox x:Name="ComBox_BaudRate" 
+                      Style="{StaticResource BottomLineComboBox}" 
+                      Margin="183,18,126.6,-19.6"/>
+                </Grid>
+            </StackPanel>
+
+        </Border>
+
+        <Border x:Name="TCP_IP"
+         CornerRadius="15"
+        BorderBrush="LightGray" 
+        BorderThickness="1" 
+        Padding="10" 
+        Margin="671,269,0,0"
+        Height="140" 
+        Width="699"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"
+        Style="{DynamicResource PortBorder}">
+
+            <StackPanel x:Name="TCP" Margin="0">
+                <!-- IP Address Selection -->
+                <Grid Margin="0,5,0,5" Height="45">
+                    <TextBlock Text="IP Address" FontSize="18" VerticalAlignment="Center" Margin="70,13,453.6,3" Height="29"/>
+                    <TextBox Width="334" Margin="217,4,0,12" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Style="{StaticResource BottomBorderTextBoxStyle}" Height="29"/>
+                </Grid>
+
+                <!-- Port Number Selection -->
+                <Grid Margin="0,5,9.6,5" Height="51">
+                    <TextBlock Text="Port Number" FontSize="18" VerticalAlignment="Center" Margin="63,16,499,7" Height="28"/>
+                    <TextBox Width="338" Height="28" Margin="209,10,0,13" HorizontalAlignment="Left" VerticalAlignment="Center"
+                     Style="{StaticResource BottomBorderTextBoxStyle}"/>
+                </Grid>
+            </StackPanel>
+
+        </Border>
+
+
+
+        <Button Content="Button" HorizontalAlignment="Left" Height="45" Margin="1400,270,0,0" VerticalAlignment="Top" Width="65" Style="{DynamicResource ButtonStyle1}"/>
         <RadioButton x:Name="rdbtn_serialreader" Content="Serial Reader" HorizontalAlignment="Left" Height="33" Margin="683,125,0,0" VerticalAlignment="Top" Width="149" FontSize="18" Checked="rdbtn_serialreader_Checked"/>
         <RadioButton Content="USB" HorizontalAlignment="Left" Height="30" Margin="680,177,0,0" VerticalAlignment="Top" Width="149" FontSize="18"/>
         <RadioButton x:Name="rdbtn_TCP" Content="TCP/IP" HorizontalAlignment="Left" Height="33" Margin="974,125,0,0" VerticalAlignment="Top" Width="135" FontSize="18" Checked="rdbtn_TCP_Checked"/>
@@ -524,123 +626,11 @@
         <CheckBox Content="3" HorizontalAlignment="Left" Height="29" Margin="1066,627,0,0" VerticalAlignment="Top" Width="99"/>
         <CheckBox Content="4" HorizontalAlignment="Left" Height="29" Margin="1186,627,0,0" VerticalAlignment="Top" Width="99"/>
         <CheckBox Content="Gen2" HorizontalAlignment="Left" Height="29" Margin="832,683,0,0" VerticalAlignment="Top" Width="99"/>
-        <Grid Margin="1094,713,141.4,41">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" MinHeight="51.2" />
-            </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
+        <!-- Skip Button -->
 
+        <!-- Next Button -->
 
-
-
-                <ColumnDefinition Width="107*"/>
-            </Grid.ColumnDefinitions>
-
-            <!-- Skip Button -->
-            <Button x:Name="btn_Skip" Content="Skip"  HorizontalAlignment="Right" Grid.Row="1" Background="#FF99BEE0" BorderBrush="Gray" BorderThickness="0" Click="On_Skip" FontSize="22" Foreground="White" Height="56" VerticalAlignment="Center" Margin="0,5.2,151.8,-6" Width="140" RenderTransformOrigin="0.502,0.5">
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-0.197"/>
-                        <TranslateTransform Y="-0.001"/>
-                    </TransformGroup>
-                </Button.RenderTransform>
-                <Button.Template>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="20">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-
-            <!-- Next Button -->
-            <Button x:Name="btn_Next" Content="Next" HorizontalAlignment="Right" Grid.Row="1" Background="#FF1762A8" BorderBrush="Gray" BorderThickness="1" Click="on_Next" FontSize="22 " Foreground="White" Margin="0,0,0.2,-5.2" Width="137" RenderTransformOrigin="0.502,0.5" Height="58" VerticalAlignment="Bottom">
-                <Button.Template>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="20">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
-        </Grid>
-        <Border x:Name="SerialReader" CornerRadius="15" BorderBrush="LightGray" BorderThickness="1" Padding="10" Margin="674,266,132.4,402">
-            <StackPanel Margin="-1.2,-1.2,-9.6,-10.6">
-                <!-- COM Port Selection -->
-                <Grid Margin="0,5,-0.4,5" Height="45">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="635.2"/>
-                        <!-- For TextBlock -->
-                        <!-- Spacer -->
-                        <!-- For ComboBox -->
-                    </Grid.ColumnDefinitions>
-
-                    <TextBlock Text="COM Port  " FontSize="18" VerticalAlignment="Center" Margin="22,13,502,3" Height="29"/>
-                    <ComboBox x:Name="ComBox_ComPort" Style="{StaticResource BottomLineComboBox}" Margin="139,11,224,0">
-
-                    </ComboBox>
-                </Grid>
-
-                <!-- Baud Rate Selection -->
-                <Grid Margin="0,5" Height="51">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="536.305"/>
-                        <ColumnDefinition Width="150.095"/>
-                        <!-- For TextBlock -->
-                        <!-- Spacer -->
-                        <!-- For ComboBox -->
-                    </Grid.ColumnDefinitions>
-
-                    <TextBlock Text="Baud Rate  " FontSize="18" VerticalAlignment="Center" Margin="22,16,411.305,8" Height="27"/>
-                    <ComboBox x:Name="ComBox_BaudRate" Style="{StaticResource BottomLineComboBox}" Margin="140,10,124.8,0"/>
-                </Grid>
-            </StackPanel>
-        </Border>
-        <Border x:Name="TCP_IP" CornerRadius="15" BorderBrush="LightGray" BorderThickness="1" Padding="10" Margin="674,306,132.4,385" Visibility="Collapsed">
-            <StackPanel x:Name="TCP" Margin="-1.2,-1.2,-9.6,-10.6">
-                <!-- IP Address Selection -->
-                <Grid Margin="0,5,-0.4,5" Height="45">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="635.2"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Text="IP Address" FontSize="18" VerticalAlignment="Center" Margin="22,16,561.4,8" Height="29"/>
-                    <!-- Replacing ComboBox with TextBox -->
-                    <TextBox Width="550" Margin="247,
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             
-                             10,86,4" HorizontalAlignment="Stretch" VerticalAlignment="Center" Style="{StaticResource BottomBorderTextBoxStyle}"/>
-                </Grid>
-
-                <!-- Port Number Selection -->
-                <Grid Margin="0,5" Height="51">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="685.6"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Text="Port Number" FontSize="18" VerticalAlignment="Center" Margin="22,16,561.4,8" Height="29"/>
-
-                    <TextBox Width="550" Height="30" Margin="250,10,86,11" HorizontalAlignment="Stretch" VerticalAlignment="Center" Style="{StaticResource BottomBorderTextBoxStyle}"/>
-                </Grid>
-            </StackPanel>
-        </Border>
 
 
 

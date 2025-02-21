@@ -1361,8 +1361,6 @@
 
                     <Label Content="  Copyright©2024 IDTECH. All Right Reserved. " HorizontalAlignment="Center" Margin="613,0,272.8,-86.6" VerticalAlignment="Bottom" Height="33" Width="375" FontSize="16" RenderTransformOrigin="2.069,0.502" Grid.Row="1" />
 
-                    <Label Content="  Copyright©2024 ReaderHub. All Right Reserved. " HorizontalAlignment="Center" Margin="613,0,272.8,-86.6" VerticalAlignment="Bottom" Height="33" Width="375" FontSize="16" RenderTransformOrigin="2.069,0.502" />
-
 
                     <!-- Inside the Grid, define the inner Border -->
                 </Grid>

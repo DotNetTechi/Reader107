@@ -44,3 +44,14 @@ C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\IDT Reader.csproj.GenerateResour
 C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\IDT Reader.csproj.CoreCompileInputs.cache
 C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\IDT Reader.exe
 C:\Users\Rau94\Source\Repos\Reader107\obj\Debug\IDT Reader.pdb
+C:\Users\DELL\source\repos\IDT Reader\bin\Debug\Docker.DotNet.dll
+C:\Users\DELL\source\repos\IDT Reader\bin\Debug\Newtonsoft.Json.dll
+C:\Users\DELL\source\repos\IDT Reader\bin\Debug\System.Buffers.dll
+C:\Users\DELL\source\repos\IDT Reader\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\DELL\source\repos\IDT Reader\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\DELL\source\repos\IDT Reader\bin\Debug\Docker.DotNet.pdb
+C:\Users\DELL\source\repos\IDT Reader\bin\Debug\Newtonsoft.Json.xml
+C:\Users\DELL\source\repos\IDT Reader\bin\Debug\System.Buffers.xml
+C:\Users\DELL\source\repos\IDT Reader\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\DELL\source\repos\IDT Reader\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\DELL\source\repos\IDT Reader\obj\Debug\IDT Reader.csproj.CopyComplete

@@ -61,7 +61,7 @@ namespace IDT_Reader
 
         private void on_Next(object sender, RoutedEventArgs e)
         {
-
+  
         }
     }
 }
