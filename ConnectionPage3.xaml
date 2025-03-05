@@ -41,7 +41,7 @@
             </Grid.ColumnDefinitions>
 
             <!-- Change Reader Button -->
-            <Button Grid.Row="0" Grid.Column="2" FontSize="16" Background="#FF0070AE" BorderBrush="#FF0070AE" Click="on_changereader" Margin="248.2,545,542.6,221">
+            <Button Grid.Row="0" Grid.Column="2" FontSize="16" Background="#FF0070AE" BorderBrush="#FF0070AE" Click="on_changereader" Margin="248.2,545,542.6,221" Height="50">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <Border Background="{TemplateBinding Background}" CornerRadius="30" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
@@ -56,7 +56,7 @@
             </Button>
 
             <!-- Connect Button -->
-            <Button Grid.Row="0" Grid.Column="2" FontSize="16" Background="#FF0070AE" BorderBrush="#FF0070AE" Click="on_connect" Height="70" Margin="442.2,0,376.6,221" VerticalAlignment="Bottom">
+            <Button Grid.Row="0" Grid.Column="2" FontSize="16" Background="#FF0070AE" BorderBrush="#FF0070AE" Click="on_connect" Height="50" Margin="442.2,0,376.6,230" VerticalAlignment="Bottom">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border Background="{TemplateBinding Background}" CornerRadius="30" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
@@ -71,7 +71,7 @@
             </Button>
 
             <!-- Next Button -->
-            <Button Grid.Row="0" Grid.Column="2" FontSize="16" Background="#FF0070AE" BorderBrush="#FF0070AE" Click="on_next" Margin="602.2,544,222.6,221">
+            <Button Grid.Row="0" Grid.Column="2" FontSize="16" Background="#FF0070AE" BorderBrush="#FF0070AE" Click="on_next" Height="50" Margin="602.2,544,222.6,221">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border Background="{TemplateBinding Background}" CornerRadius="30" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">

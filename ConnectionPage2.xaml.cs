@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace IDT_Reader
@@ -17,11 +18,13 @@ namespace IDT_Reader
     /// <summary>
     /// Interaction logic for ConnectionPage2.xaml
     /// </summary>
-    public partial class ConnectionPage2 : Window
+    public partial class ConnectionPage2 : UserControl
     {
         public ConnectionPage2()
         {
             InitializeComponent();
+            SerialReader.BorderBrush = Brushes.LightGray; // Default border color
+            SerialReader.BorderThickness = new Thickness(1);
         }
 
         private void wnd_Connection_Loaded(object sender, RoutedEventArgs e)
@@ -62,6 +65,18 @@ namespace IDT_Reader
         private void on_Next(object sender, RoutedEventArgs e)
         {
   
+        }
+
+      private void onNext(object sender, RoutedEventArgs e)
+{
+           
+        }
+
+        
+        private void SerialReader_Loaded(object sender, RoutedEventArgs e)
+        {
+            SerialReader.BorderBrush = Brushes.LightGray; // Default border color
+            SerialReader.BorderThickness = new Thickness(1);
         }
     }
 }

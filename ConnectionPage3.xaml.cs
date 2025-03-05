@@ -15,7 +15,6 @@ using System.Windows.Shapes;
 namespace IDT_Reader
 {
     /// <summary>
-    /// Interaction logic for ConnectionPage3.xaml
     /// </summary>
     public partial class ConnectionPage3 : Window
     {
@@ -26,17 +25,20 @@ namespace IDT_Reader
 
         private void on_changereader(object sender, RoutedEventArgs e)
         {
-
+            ConnectionPage2 ChangeReader = new ConnectionPage2();
+            this.Content = ChangeReader;
+            //ChangeReader.Show();
         }
 
         private void on_connect(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void on_next(object sender, RoutedEventArgs e)
         {
-
+            MainWindow ReadeWindow = new MainWindow(); 
+            ReadeWindow.Show();
         }
     }
 }
